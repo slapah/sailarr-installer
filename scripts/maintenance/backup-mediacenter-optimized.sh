@@ -29,7 +29,6 @@ cp "${MEDIACENTER_ROOT}/docker/down.sh" "${BACKUP_DIR}/" 2>/dev/null || echo "  
 cp -r "${MEDIACENTER_ROOT}/docker/compose-services/" "${BACKUP_DIR}/" 2>/dev/null || echo "   ⚠️ compose-services not found"
 cp "${MOUNT_ROOT}/setup.sh" "${BACKUP_DIR}/" 2>/dev/null || echo "   ⚠️ setup.sh not found"
 cp "${MOUNT_ROOT}/zurg.yml" "${BACKUP_DIR}/" 2>/dev/null || echo "   ⚠️ zurg.yml not found"
-cp "${MOUNT_ROOT}/CLAUDE.md" "${BACKUP_DIR}/" 2>/dev/null || echo "   ⚠️ CLAUDE.md not found"
 cp "${MOUNT_ROOT}/backup-mediacenter.sh" "${BACKUP_DIR}/" 2>/dev/null || true
 cp "/tmp/mediacenter-permissions-report.txt" "${BACKUP_DIR}/" 2>/dev/null || true
 
@@ -143,7 +142,7 @@ These will be regenerated automatically when services start.
    sudo mkdir -p /mediacenter/docker/
    sudo cp docker-compose.yml .env.defaults .env.local up.sh down.sh /mediacenter/docker/
    sudo cp -r compose-services/ /mediacenter/docker/
-   sudo cp setup.sh zurg.yml CLAUDE.md /mnt/mediacenter/
+   sudo cp setup.sh zurg.yml /mnt/mediacenter/
    
    # Restore directory structure
    sudo mkdir -p /mediacenter/data/{media/{movies,tv,youtube},realdebrid-zurg,symlinks/{radarr,sonarr}}

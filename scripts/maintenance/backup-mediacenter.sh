@@ -25,7 +25,6 @@ cp "${MOUNT_ROOT}/compose.yml" "${BACKUP_DIR}/"
 cp "${MOUNT_ROOT}/.env" "${BACKUP_DIR}/"
 cp "${MOUNT_ROOT}/setup.sh" "${BACKUP_DIR}/" 2>/dev/null || echo "   ⚠️ setup.sh not found"
 cp "${MOUNT_ROOT}/zurg.yml" "${BACKUP_DIR}/" 2>/dev/null || echo "   ⚠️ zurg.yml not found"
-cp "${MOUNT_ROOT}/CLAUDE.md" "${BACKUP_DIR}/" 2>/dev/null || echo "   ⚠️ CLAUDE.md not found"
 
 # 2. Backup all service configurations
 echo "   → Service configurations"
@@ -80,7 +79,7 @@ cat > "${BACKUP_DIR}/RESTORE-INSTRUCTIONS.md" << 'EOF'
    ```bash
    # Copy configuration files
    sudo cp -r config/ /mediacenter/
-   sudo cp compose.yml .env setup.sh zurg.yml CLAUDE.md /mnt/mediacenter/
+   sudo cp compose.yml .env setup.sh zurg.yml /mnt/mediacenter/
    
    # Restore directory structure
    sudo mkdir -p /mediacenter/data/{media/{movies,tv,youtube},realdebrid-zurg,symlinks/{radarr,sonarr}}
